@@ -1,0 +1,40 @@
+{
+  "page": {
+    "login": {
+      "title": "Log in to the admin panel",
+      "email": "Email Address",
+      "password": "Password",
+      "log": "Log In",
+      "recovery": "Forgot your password?",
+      "logout": "Don’t have an account? Sign up here",
+      "copyright": "All rights reserved",
+      "slider": {
+        "items": {
+          "1": {
+            "title": "MORE PAYMENT <br/> <strong>OPTIONS</strong>, MORE <br/> CHANCES TO <br/> <strong>SELL</strong>",
+            "description": "Choose <strong>convenience and variety!</strong> Sign up with us and get access to more than <strong>22 payment options</strong> for your transactions, from <strong>credit cards</strong> to <strong>digital wallets.</strong> Sign up now and streamline your payments with <strong>ePayco.</strong>",
+            "footer": "<strong>CREATE</strong> PURSUE<br/> ACHIEVE <strong>REPEAT</strong>"
+          },
+          "2": {
+            "title": "ANTI-FRAUD<br/><strong>MODULE</strong><br />",
+            "description": "<strong>Protect </strong> your transactions with our <strong>state-of-the-art anti-fraud solution.</strong> With <strong>3D Secure,</strong> your security is our priority. <br /><br />Take the <strong>protection of your payments</strong> to the next level.",
+            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+          },
+          "3": {
+            "title": "<strong>GET PAID</strong> WITH <br/> PAYMENT LINK",
+            "description": "Get paid quickly and easily with our <strong>secure Payment Link!</strong> Simplify your transactions in seconds.",
+            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+          },
+          "4": {
+            "description": "<strong>Manage your funds effortlessly!</strong> With <strong>ePayco + PayPal,</strong> <br />withdraw your earnings to any bank account. An efficient <br /> solution for your online transactions. <br /><br /><strong>Make your money work for you!</strong>",
+            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+          },
+          "5": {
+            "description": "<strong>Boost</strong> your online store with the perfect integration of <br/> <strong>Shopify and ePayco.</strong> Accept payments efficiently and securely. <br/><br/><strong>Grow your business with the best combination!</strong>",
+            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+          }
+        }
+      }
+    }
+  }
+}
