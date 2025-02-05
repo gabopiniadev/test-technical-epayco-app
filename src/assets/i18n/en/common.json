@@ -4,6 +4,8 @@
       "title": "Error"
     },
     "success": {
+      "title": "Success",
+      "details": "Registration successful!"
     },
     "login": {
       "title": "Log in to the admin panel",

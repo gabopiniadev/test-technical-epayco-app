@@ -4,6 +4,8 @@
       "title": "Error"
     },
     "success": {
+      "title": "Exito",
+      "details": "Registro con exito!"
     },
     "login": {
       "title": "Inicia sesión en el panel de administración",
@@ -87,6 +89,10 @@
         "mount": "Cantidad a Pagar",
         "pay": "Cantidad a Recargar",
         "balance": "Balance",
+        "success": {
+          "title": "Exito",
+          "details": "Registro con exito!"
+        },
         "phone": "Telefono celular",
         "payment": {
           "title": "Realizar un pago",

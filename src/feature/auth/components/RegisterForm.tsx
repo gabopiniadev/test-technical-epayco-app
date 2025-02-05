@@ -82,19 +82,23 @@ const RegisterForm = () => {
             await axios.post("http://localhost:5000/api/auth/register", formData);
             showToast(
                 "success",
-                t("page.register.success"),
-                t("page.register.success.detail")
+                t("page.success.title"),
+                t("page.success.detail")
             );
-            navigate("/");
+            setTimeout(() => {
+                setLoading(false);
+                navigate("/");
+            }, 2000);
         } catch (error: any) {
             showToast(
                 "error",
-                t("page.register.error"),
-                error.response?.data?.message || t("page.register.error.general")
+                t("page.error.title"),
+                error.response?.data?.message
             );
             console.error("Error:", error);
-        } finally {
-            setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+            }, 2000);
         }
     };
 
