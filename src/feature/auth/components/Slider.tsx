@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const Slider : React.FC = () => {
+const Slider  = () => {
 
     const { t } = useTranslation();
 

@@ -1,55 +1,53 @@
-import React, { useRef, useState } from "react";
-import {useNavigate} from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import {authenticateUser} from "../services/AuthService";
+import { authenticateUser } from "../services/AuthService";
 import "../../../assets/css/login.css";
 
-import {InputText} from "primereact/inputtext";
-import {Password} from "primereact/password";
-import {Button} from "primereact/button";
-import {ProgressSpinner} from "primereact/progressspinner";
-import {Toast} from 'primereact/toast';
+import { InputText } from "primereact/inputtext";
+import { Password } from "primereact/password";
+import { Button } from "primereact/button";
+import { ProgressSpinner } from "primereact/progressspinner";
+import { Toast } from "primereact/toast";
 
-
-const LoginForm: React.FC = () => {
+const LoginForm = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
-    const {t, i18n} = useTranslation();
-    const toast = useRef(null);
+    const { t, i18n } = useTranslation();
+    const toast = useRef<Toast>(null);
 
+    const isSpanish: boolean = i18n.language === "es";
 
-    const currentLang = i18n.language;
-    const isSpanish = currentLang === "es";
+    useEffect(() => {
+        const token = localStorage.getItem("accessToken");
+        if (token) {
+            navigate("/dashboard");
+        }
+    }, [navigate]);
 
-    const changeLanguage = () => {
+    const toggleLanguage = () => {
         const newLang = isSpanish ? "en" : "es";
         i18n.changeLanguage(newLang);
     };
 
-    const showError = () => {
-        toast.current.show({
-            severity: 'error',
-            summary: 'Error',
-            detail: 'Message Content',
-            life: 3000
-        });
-    }
+    const showToast = (severity: "success" | "error", summary: string, detail: string = "", life: number = 5000) => {
+        toast.current?.show({ severity, summary, detail, life });
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        setError(null);
 
         try {
-            const response = await authenticateUser({email, password});
+            const response = await authenticateUser({ email, password });
             localStorage.setItem("accessToken", response.token);
+            showToast("success", t("page.login.success"));
             navigate("/dashboard");
         } catch (err: any) {
-            setError(err.message || t("page.login.error.general"));
+            showToast("error", t("page.error.title"), err.message);
         } finally {
             setLoading(false);
         }
@@ -59,7 +57,7 @@ const LoginForm: React.FC = () => {
         <div className="container-form">
             {loading && (
                 <div className="screen-loading">
-                    <ProgressSpinner/>
+                    <ProgressSpinner />
                 </div>
             )}
 
@@ -71,16 +69,16 @@ const LoginForm: React.FC = () => {
                 <div className="select-lang">
                     <img
                         src={`/src/assets/img/lang/${isSpanish ? "es" : "en"}.png`}
-                        alt={isSpanish ? "Español" : "English"}
+                        alt={isSpanish ? "Cambiar a inglés" : "Switch to Spanish"}
                         width={32}
                         height={32}
-                        onClick={changeLanguage}
-                        style={{cursor: "pointer"}}
+                        onClick={toggleLanguage}
+                        style={{ cursor: "pointer" }}
                     />
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} noValidate>
                 <div className="p-field">
                     <label htmlFor="email">{t("page.login.email")}</label>
                     <InputText
@@ -106,7 +104,10 @@ const LoginForm: React.FC = () => {
                 </div>
 
                 <div className="recovery">
-                    <span> {t("page.login.recovery")} <a href="/reset-password">{t("page.login.recover")}</a> </span>
+          <span>
+            {t("page.login.recovery")}{" "}
+              <a href="/reset-password">{t("page.login.recover")}</a>
+          </span>
                 </div>
 
                 <Button
@@ -114,12 +115,14 @@ const LoginForm: React.FC = () => {
                     label={loading ? t("page.login.loading") : t("page.login.log")}
                     icon="pi pi-check"
                     severity="secondary"
-                    onClick={showError}
                     disabled={loading}
                 />
 
                 <div className="register">
-                    <span>{t("page.login.logout")}{" "} <a href="/register">{t("page.login.register")}</a></span>
+          <span>
+            {t("page.login.logout")}{" "}
+              <a href="/register">{t("page.login.register")}</a>
+          </span>
                 </div>
                 <div className="copyright">
                     <div className="text">{t("page.login.copyright")}</div>
@@ -131,10 +134,9 @@ const LoginForm: React.FC = () => {
                     </div>
                 </div>
             </form>
-            <Toast ref={toast}/>
+            <Toast ref={toast} />
         </div>
     );
 };
-
 
 export default LoginForm;

@@ -1,40 +1,106 @@
 {
   "page": {
+    "error": {
+      "title": "Error"
+    },
+    "success": {
+    },
     "login": {
       "title": "Inicia sesión en el panel de administración",
       "email": "Correo Electrónico",
-      "password": "Contrasena",
-      "log": "Iniciar Session",
-      "recovery": "Olvidaste la Contrasena?,",
-      "recover": "Recuperar aqui",
-      "logout": "No tienes una cuenta?,",
-      "register": "Registrate aqui",
+      "password": "Contraseña",
+      "log": "Iniciar Sesión",
+      "recovery": "¿Olvidaste la Contraseña?",
+      "recover": "Recupérala aquí",
+      "logout": "¿No tienes una cuenta?",
+      "register": "Regístrate aquí",
       "copyright": "Copyright 2011-2025 ePayco.com",
       "slider": {
         "items": {
           "1": {
-            "title": "MÁS MEDIOS DE <br/> <strong>PAGO</strong>, MÁS <br/> OPCIONES DE <br/> <strong>VENDER</strong>",
+            "title": "MÁS MEDIOS DE <br/> <strong>PAGO</strong>, MÁS <br/> OPCIONES DE <br/> <strong>VENTA</strong>",
             "description": "¡Elige la <strong>comodidad y la variedad!</strong> Regístrate con nosotros y accede a más de <strong>22 opciones de pago</strong> para tus transacciones, desde <strong>tarjetas de crédito</strong> hasta <strong>billeteras digitales.</strong> Regístrate ahora y simplifica tus pagos con <strong>ePayco.</strong>",
-            "footer": "<strong>CREE</strong> PERSIGUE<br/> LOGRA <strong>REPITE</strong>"
+            "footer": "<strong>CREE</strong>, PERSIGUE<br/> LOGRA <strong>REPITE</strong>"
           },
           "2": {
             "title": "MÓDULO<br/><strong>ANTIFRAUDE</strong><br />",
             "description": "<strong>Protege </strong> tus transacciones con nuestra <strong>solución antifraude </strong> de <br /> vanguardia. Con <strong>3D Secure,</strong> tu seguridad es nuestra prioridad. <br /><br />Lleva la <strong>protección de tus pagos</strong> al siguiente nivel.",
-            "footer": "<strong>PLANEA</strong> ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
+            "footer": "<strong>PLANEA</strong>, ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
           },
           "3": {
             "title": "<strong>COBRA</strong> CON <br/> LINK DE COBRO",
-            "description": "¡Cobra fácil y rápido con nuestro <strong> Link de cobro seguro!</strong> Simplifica tus transacciones en segundos.",
-            "footer": "<strong>PLANEA</strong> ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
+            "description": "¡Cobra fácil y rápido con nuestro <strong>Link de cobro seguro!</strong> Simplifica tus transacciones en segundos.",
+            "footer": "<strong>PLANEA</strong>, ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
           },
           "4": {
             "description": "<strong>¡Gestiona tus fondos de forma sencilla!</strong> Con <strong>ePayco + PayPal,</strong> <br />retira tus ganancias a cualquier cuenta bancaria. Una solución <br /> eficiente para tus transacciones en línea. <br /><br /><strong>¡Haz que tu dinero trabaje para ti!</strong>",
-            "footer": "<strong>PLANEA</strong> ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
+            "footer": "<strong>PLANEA</strong>, ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
           },
           "5": {
             "description": "<strong>Potencia</strong> tu tienda en línea con la integración perfecta de <br/> <strong>Shopify y ePayco.</strong> Acepta pagos de manera eficiente y segura. <br/><br/><strong>¡Haz crecer tu negocio con la mejor combinación!</strong>",
-            "footer": "<strong>PLANEA</strong> ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
+            "footer": "<strong>PLANEA</strong>, ACTÚA<br/> AVANZA <strong>LOGRA</strong>"
           }
+        }
+      }
+    },
+    "register": {
+      "title": "Crear cuenta Wallet",
+      "document": {
+        "title": "Documento",
+        "type": "Tipo de Documento"
+      },
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "password": "Contraseña",
+      "login": "Iniciar Sesión",
+      "btn": "Registrar",
+      "type": {
+        "select": "Seleccione el tipo de persona",
+        "natural": "Persona Natural",
+        "juridica": "Persona Jurídica"
+      },
+      "have": {
+        "account": "¿Tienes una cuenta registrada?"
+      }
+    },
+    "dashboard": {
+      "menu": {
+        "home": "Inicio",
+        "recharge": "Recargar Wallet",
+        "payment": "Pagar",
+        "payment-confirmation": "Confirmación de Pagos",
+        "balance": "Consultar Saldo",
+        "session": "Cerrar Sesión"
+      },
+      "profile": {
+        "welcome": "Bienvenido de nuevo,",
+        "lastConnect": "Tu última conexión fue:",
+        "status": "Estatus de la cuenta wallet:",
+        "name": "",
+        "document": "",
+        "mount": ""
+      },
+      "wallet": {
+        "recharge": "Recargar Billetera",
+        "document": "Documento de Identidad",
+        "mount": "Cantidad a Pagar",
+        "pay": "Cantidad a Recargar",
+        "balance": "Balance",
+        "phone": "Telefono celular",
+        "payment": {
+          "title": "Realizar un pago",
+          "pay": "Pagar",
+          "document": "Documento de Identidad",
+          "phone": "Número de Teléfono",
+          "mount": "Cantidad a Pagar"
+        },
+        "confirmation": {
+          "title": "Confirmar pago realizado",
+          "name": "Nombre del cliente",
+          "session": "Identificador de sesión",
+          "token": "Código de Confirmación",
+          "pay": "Confirmar"
         }
       }
     }

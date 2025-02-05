@@ -1,38 +1,106 @@
 {
   "page": {
+    "error": {
+      "title": "Error"
+    },
+    "success": {
+    },
     "login": {
       "title": "Log in to the admin panel",
       "email": "Email Address",
       "password": "Password",
       "log": "Log In",
-      "recovery": "Forgot your password?",
-      "logout": "Don’t have an account? Sign up here",
-      "copyright": "All rights reserved",
+      "recovery": "Forgot your Password?",
+      "recover": "Recover it here",
+      "logout": "Don't have an account?",
+      "register": "Register here",
+      "copyright": "Copyright 2011-2025 ePayco.com",
       "slider": {
         "items": {
           "1": {
-            "title": "MORE PAYMENT <br/> <strong>OPTIONS</strong>, MORE <br/> CHANCES TO <br/> <strong>SELL</strong>",
-            "description": "Choose <strong>convenience and variety!</strong> Sign up with us and get access to more than <strong>22 payment options</strong> for your transactions, from <strong>credit cards</strong> to <strong>digital wallets.</strong> Sign up now and streamline your payments with <strong>ePayco.</strong>",
-            "footer": "<strong>CREATE</strong> PURSUE<br/> ACHIEVE <strong>REPEAT</strong>"
+            "title": "MORE PAYMENT <br/> <strong>METHODS</strong>, MORE <br/> OPTIONS TO <br/> <strong>SELL</strong>",
+            "description": "Choose <strong>convenience and variety!</strong> Sign up with us and access over <strong>22 payment options</strong> for your transactions, from <strong>credit cards</strong> to <strong>digital wallets.</strong> Sign up now and simplify your payments with <strong>ePayco.</strong>",
+            "footer": "<strong>CREATE</strong>, PURSUE<br/> ACHIEVE <strong>REPEAT</strong>"
           },
           "2": {
             "title": "ANTI-FRAUD<br/><strong>MODULE</strong><br />",
-            "description": "<strong>Protect </strong> your transactions with our <strong>state-of-the-art anti-fraud solution.</strong> With <strong>3D Secure,</strong> your security is our priority. <br /><br />Take the <strong>protection of your payments</strong> to the next level.",
-            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+            "description": "<strong>Protect</strong> your transactions with our cutting-edge <strong>anti-fraud solution.</strong> With <strong>3D Secure,</strong> your security is our priority. <br /><br />Take the <strong>protection of your payments</strong> to the next level.",
+            "footer": "<strong>PLAN</strong>, ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
           },
           "3": {
-            "title": "<strong>GET PAID</strong> WITH <br/> PAYMENT LINK",
-            "description": "Get paid quickly and easily with our <strong>secure Payment Link!</strong> Simplify your transactions in seconds.",
-            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+            "title": "<strong>CHARGE</strong> WITH <br/> PAYMENT LINK",
+            "description": "Quickly and easily charge with our <strong>secure payment link!</strong> Simplify your transactions in seconds.",
+            "footer": "<strong>PLAN</strong>, ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
           },
           "4": {
-            "description": "<strong>Manage your funds effortlessly!</strong> With <strong>ePayco + PayPal,</strong> <br />withdraw your earnings to any bank account. An efficient <br /> solution for your online transactions. <br /><br /><strong>Make your money work for you!</strong>",
-            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+            "description": "<strong>Manage your funds effortlessly!</strong> With <strong>ePayco + PayPal,</strong> withdraw your earnings to any bank account. An efficient solution for your online transactions. <br /><br /><strong>Make your money work for you!</strong>",
+            "footer": "<strong>PLAN</strong>, ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
           },
           "5": {
-            "description": "<strong>Boost</strong> your online store with the perfect integration of <br/> <strong>Shopify and ePayco.</strong> Accept payments efficiently and securely. <br/><br/><strong>Grow your business with the best combination!</strong>",
-            "footer": "<strong>PLAN</strong> ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
+            "description": "<strong>Boost</strong> your online store with the perfect integration of <strong>Shopify and ePayco.</strong> Accept payments efficiently and securely. <br/><br/><strong>Grow your business with the best combination!</strong>",
+            "footer": "<strong>PLAN</strong>, ACT<br/> ADVANCE <strong>ACHIEVE</strong>"
           }
+        }
+      }
+    },
+    "register": {
+      "title": "Create Wallet Account",
+      "document": {
+        "title": "Document",
+        "type": "Document Type"
+      },
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "login": "Log In",
+      "btn": "Register",
+      "type": {
+        "select": "Select the type of person",
+        "natural": "Natural Person",
+        "juridica": "Legal Entity"
+      },
+      "have": {
+        "account": "Do you already have an account?"
+      }
+    },
+    "dashboard": {
+      "menu": {
+        "home": "Home",
+        "recharge": "Recharge Wallet",
+        "payment": "Pay",
+        "payment-confirmation": "Payment Confirmation",
+        "balance": "Check Balance",
+        "session": "Log Out"
+      },
+      "profile": {
+        "welcome": "Welcome back,",
+        "lastConnect": "Your last connection was:",
+        "status": "Wallet account status:",
+        "name": "",
+        "document": "",
+        "mount": ""
+      },
+      "wallet": {
+        "recharge": "Recharge Wallet",
+        "document": "Identity Document",
+        "mount": "Amount to Pay",
+        "pay": "Amount to Recharge",
+        "phone": "Phone",
+        "balance": "Balance",
+        "payment": {
+          "title": "Make a Payment",
+          "pay": "Pay",
+          "document": "Identity Document",
+          "phone": "Phone Number",
+          "mount": "Amount to Pay"
+        },
+        "confirmation": {
+          "title": "Confirm Completed Payment",
+          "name": "Customer Name",
+          "session": "Session Identifier",
+          "token": "Confirmation Code",
+          "pay": "Confirm"
         }
       }
     }

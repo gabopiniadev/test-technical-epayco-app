@@ -1,0 +1,83 @@
+.dashboard {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dashboard-main {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #2f3e46;
+    color: white;
+    height: 100%;
+    transition: width 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.sidebar.expanded {
+    width: 250px;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar .hamburger {
+    align-self: flex-end;
+    margin: 10px 0;
+    color: white;
+}
+
+.sidebar .menu-items {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    transition: align-items 0.3s ease;
+}
+
+.sidebar.collapsed .menu-items {
+    align-items: center;
+}
+
+.sidebar .menu-items .p-button {
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    transition: justify-content 0.3s ease;
+}
+
+.sidebar.collapsed .menu-items .p-button {
+    justify-content: center;
+}
+
+.sidebar .p-button-text {
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+@media (max-width: 768px) {
+    .sidebar.expanded {
+        width: 200px;
+    }
+
+    .expanded + .content {
+        margin-left: 200px;
+    }
+}

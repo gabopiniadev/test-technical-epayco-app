@@ -1,0 +1,48 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-container .welcome {
+    display: flex;
+    width: 100%;
+    height: 48rem;
+    border: 2px #b5aaaa solid;
+    border-radius: 7px;
+    margin-bottom: 2rem;
+}
+
+.home-container .welcome .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-container .welcome .user-info span {
+    margin: 2rem 0 0 2rem;
+}
+
+.home-container .wallet {
+    display: flex;
+    width: 100%;
+    height: 48rem;
+    border: 2px #b5aaaa solid;
+    border-radius: 7px;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.home-container .wallet .p-field {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin-bottom: 2rem;
+}
+
+.home-container .wallet .p-field input {
+    width: 350px;
+}

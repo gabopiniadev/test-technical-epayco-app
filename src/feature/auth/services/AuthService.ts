@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "http://localhost:5000/api";
 
 interface LoginData {
     email: string;
@@ -25,7 +25,7 @@ export const authenticateUser = async (
         return response.data;
     } catch (error: any) {
         throw new Error(
-            error.response?.data?.message || "Error desconocido al autenticarse."
+            error.response?.data?.message
         );
     }
 };

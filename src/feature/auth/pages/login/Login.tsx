@@ -1,8 +1,7 @@
-import React from "react";
 import LoginForm from "../../components/LoginForm";
 import Slider from "../../components/Slider.tsx";
 
-const LoginPage: React.FC = () => {
+const LoginPage = () => {
     return (
         <div className="container-login">
             <div className="slider-container">
