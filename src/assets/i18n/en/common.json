@@ -1,7 +1,8 @@
 {
   "page": {
     "error": {
-      "title": "Error"
+      "title": "Error",
+      "form": "Invalid Form"
     },
     "success": {
       "title": "Success",

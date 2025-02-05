@@ -1,7 +1,8 @@
 {
   "page": {
     "error": {
-      "title": "Error"
+      "title": "Error",
+      "form": "Los campos son obligatorios"
     },
     "success": {
       "title": "Exito",

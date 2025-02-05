@@ -63,8 +63,8 @@ const RegisterForm = () => {
         if (!typeDocument || !document || !email || !password) {
             showToast(
                 "error",
-                t("page.register.error"),
-                t("page.register.error.missingFields")
+                t("page.error.title"),
+                t("page.error.form")
             );
             return false;
         }
@@ -83,7 +83,7 @@ const RegisterForm = () => {
             showToast(
                 "success",
                 t("page.success.title"),
-                t("page.success.detail")
+                t("page.success.details")
             );
             setTimeout(() => {
                 setLoading(false);
