@@ -1,5 +1,5 @@
 import './App.css'
-import React from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "../src/feature/auth/pages/login/Login";
 import PrivateRoute from "./feature/auth/security/private-route/PrivateRoute.tsx";
