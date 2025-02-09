@@ -91,7 +91,7 @@ const Payment = () => {
                 phone: formData.phone,
                 document: formData.document,
             });
-            setIsDialogVisible(true); 
+            setIsDialogVisible(true);
 
             setFormData({ document: "", phone: "", amount: "" });
         } catch (error: any) {

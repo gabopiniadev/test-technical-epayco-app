@@ -29,11 +29,19 @@ const WalletRecharge = () => {
 
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:5000/api/wallet/recharge', {
-                document,
-                phone,
-                amount: parseFloat(amount),
-            });
+
+            const token = localStorage.getItem('accessToken');
+
+            const response = await axios.post('http://localhost:5000/api/wallet/recharge',
+                {
+                    document,
+                    phone,
+                    amount: parseFloat(amount),
+                },
+                {
+                    headers: {Authorization: `Bearer ${token}`},
+                }
+            );
 
             toast.current?.show({
                 severity: "success",
