@@ -4,7 +4,6 @@ import axios from "axios";
 import {useTranslation} from "react-i18next";
 import {DataTable} from "primereact/datatable";
 import {Column} from "primereact/column";
-import {Payment} from "../../shared/interfaces/payment.interface.ts";
 import PaymentConfirmation from "../payment-confirmation/PaymentConfirmation.tsx";
 import {Toast} from "primereact/toast";
 import { Dialog } from "primereact/dialog";

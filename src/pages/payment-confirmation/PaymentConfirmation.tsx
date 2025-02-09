@@ -31,7 +31,7 @@ const PaymentConfirmation = ({ payment, toast, onClose }) => {
 
             toast.current?.show({
                 severity: "success",
-                summary: t("page.register.success"),
+                summary: t("page.success.details"),
                 detail: response.data.message,
                 life: 5000,
             });

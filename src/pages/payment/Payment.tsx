@@ -38,7 +38,7 @@ const Payment = () => {
         if (!document || !phone || !amount) {
             toast.current?.show({
                 severity: "warn",
-                summary: t("page.wallet.payment.error"),
+                summary: t("page.error.details"),
                 detail: t("page.wallet.payment.requiredFields"),
                 life: 5000,
             });
@@ -47,7 +47,7 @@ const Payment = () => {
         if (isNaN(parseFloat(amount)) || parseFloat(amount) <= 0) {
             toast.current?.show({
                 severity: "warn",
-                summary: t("page.wallet.payment.error"),
+                summary: t("page.error.details"),
                 detail: t("page.wallet.payment.invalidAmount"),
                 life: 5000,
             });
@@ -80,7 +80,7 @@ const Payment = () => {
 
             toast.current?.show({
                 severity: "success",
-                summary: t("page.wallet.confirmation.title"),
+                summary: t("page.success.details"),
                 detail: response.data.message,
                 life: 5000,
             });
@@ -103,7 +103,7 @@ const Payment = () => {
 
             toast.current?.show({
                 severity: "error",
-                summary: t("page.wallet.payment.error"),
+                summary: t("page.error.details"),
                 detail: errorMessage,
                 life: 5000,
             });
