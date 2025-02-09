@@ -12,12 +12,20 @@
     border: 2px #b5aaaa solid;
     border-radius: 7px;
     margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .home-container .welcome .user-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.home-container .welcome .table-history {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .home-container .welcome .user-info span {
@@ -46,3 +54,58 @@
 .home-container .wallet .p-field input {
     width: 350px;
 }
+
+.action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.action-button.disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.status-badge {
+    padding: 5px 6px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background-color: #e74c3c;
+}
+
+.status-badge.completed {
+    background-color: #2ecc71;
+}
+
+.wallet {
+    display: flex  ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wallet .p-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallet .p-field {
+  margin-bottom: 2rem;
+}
+
+

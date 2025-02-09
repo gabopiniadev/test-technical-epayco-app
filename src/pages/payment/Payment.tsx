@@ -1,10 +1,12 @@
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import axios from "axios";
-import {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 import { Toast } from "primereact/toast";
 import { useTranslation } from "react-i18next";
 import { ProgressSpinner } from "primereact/progressspinner";
+import { Dialog } from "primereact/dialog";
+import PaymentConfirmation from "../payment-confirmation/PaymentConfirmation";
 
 const Payment = () => {
     const { t } = useTranslation();
@@ -17,6 +19,8 @@ const Payment = () => {
     });
 
     const [loading, setLoading] = useState<boolean>(false);
+    const [isDialogVisible, setIsDialogVisible] = useState<boolean>(false);
+    const [confirmationData, setConfirmationData] = useState(null);
 
     const API_URL = "http://localhost:5000/api/wallet/payment";
 
@@ -76,10 +80,18 @@ const Payment = () => {
 
             toast.current?.show({
                 severity: "success",
-                summary: t("page.wallet.payment.success"),
+                summary: t("page.wallet.confirmation.title"),
                 detail: response.data.message,
                 life: 5000,
             });
+
+            setConfirmationData({
+                paymentId: response.data.paymentId,
+                amount: formData.amount,
+                phone: formData.phone,
+                document: formData.document,
+            });
+            setIsDialogVisible(true); 
 
             setFormData({ document: "", phone: "", amount: "" });
         } catch (error: any) {
@@ -98,6 +110,11 @@ const Payment = () => {
         } finally {
             setLoading(false);
         }
+    };
+
+    const handleCloseDialog = () => {
+        setIsDialogVisible(false);
+        setConfirmationData(null);
     };
 
     return (
@@ -146,6 +163,21 @@ const Payment = () => {
                     className="p-mt-3"
                 />
             </div>
+
+            <Dialog
+                header={t("page.dashboard.wallet.confirmation.title")}
+                visible={isDialogVisible}
+                style={{ width: "50vw" }}
+                onHide={handleCloseDialog}
+            >
+                {confirmationData && (
+                    <PaymentConfirmation
+                        payment={confirmationData}
+                        toast={toast}
+                        onClose={handleCloseDialog}
+                    />
+                )}
+            </Dialog>
 
             <Toast ref={toast} />
         </div>

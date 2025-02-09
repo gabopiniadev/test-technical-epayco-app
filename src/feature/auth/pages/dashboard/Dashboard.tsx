@@ -9,7 +9,6 @@ import "primeicons/primeicons.css";
 import "../../../../assets/css/dashboard.css";
 import WalletRecharge from "../../../../pages/wallet-recharge/Wallet.tsx";
 import Payment from "../../../../pages/payment/Payment.tsx";
-import PaymentConfirmation from "../../../../pages/payment-confirmation/PaymentConfirmation.tsx";
 import WalletBalance from "../../../../pages/wallet-balance/WalletBalance.tsx";
 import Home from "../../../../pages/home/Home.tsx";
 import {useTranslation} from "react-i18next";
@@ -27,8 +26,7 @@ const DashboardPage = () => {
         { key: "home", label: t("page.dashboard.menu.home"), icon: "pi pi-home", component: <Home /> },
         { key: "recharge", label: t("page.dashboard.menu.recharge") , icon: "pi pi-wallet", component: <WalletRecharge /> },
         { key: "payment",  label: t("page.dashboard.menu.payment"), icon: "pi pi-dollar", component: <Payment /> },
-        { key: "confirm",  label: t("page.dashboard.menu.payment-confirmation"), icon: "pi pi-check", component: <PaymentConfirmation /> },
-        { key: "balance",  label: t("page.dashboard.menu.balance"), icon: "pi pi-cash", component: <WalletBalance /> },
+        { key: "balance",  label: t("page.dashboard.menu.balance"), icon: "pi pi-check", component: <WalletBalance /> },
     ];
 
     const handleLogout = () => {
